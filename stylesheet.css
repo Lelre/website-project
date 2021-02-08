@@ -12,6 +12,19 @@
 
 /*Estilizando o navegador*/
 
+nav .logonav{
+    position: relative;
+    width: 200px;
+    height: auto;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 60px;
+    float: left;
+    margin-left: 40px;
+
+}
+
 nav {
     height: 75px;
     max-width: auto;
@@ -85,6 +98,7 @@ nav ul li a:hover{
     color: white;
     line-height: 75px;
     cursor: pointer;
+    display: none;
 }
 
 .checkbtn:hover{

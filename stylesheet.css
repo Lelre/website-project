@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+*{
+    font-family: 'Hammersmith One', sans-serif;
+   
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav {
+    height: 75px;
+    max-width: auto;
+
+    position: relative;
+    background-color: rgb(103, 48, 255);
+}
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+
+nav ul li{
+    line-height: 55px;
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.nav-links::after{
+    content: '';
+    position: relative;
+    top: 70px; width: 0;
+    display: block;
+    top: 8px;
+    height: 2px;
+    transition: width 0.2s ease-out;
+    background-color: rgb(45, 45, 45);
+}
+
+.nav-links:hover::after{
+    left: 0;
+    width: 100%;
+    transition: width 3.s;
+}
+
+a.active,a:hover{
+    transition: .5s;
+}
+
+nav ul li a:hover{
+    color: rgb(45, 45, 45);
+}
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    margin-right: 40px;
+    float: right;
+    font-size: 30px;
+    color: white;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+.checkbtn:hover{
+    color: rgb(45, 45, 45);
+}
+
+@media (max-width: 900px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        background-color: rgb(45, 45, 45);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul li a:hover{
+        color:rgb(103, 48, 255);
+    }
+
+    a:hover, a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}

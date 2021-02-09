@@ -173,7 +173,7 @@ nav ul li a:hover{
 
 /*Fim Configurando botão checkbox*/
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
     .checkbtn{
         display: block;
     }

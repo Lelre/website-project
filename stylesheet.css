@@ -9,7 +9,6 @@
 
 /* TOP NAV */
 
-
 .header-top-container{
     max-width: auto;
     padding: 1px 0 5px 0;
@@ -20,6 +19,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-top-container-start{
+    margin-left: 50px;
+}
+
+.header-top-container-end{
+    margin-right: 50px;
 }
 
 .header-top-container-start ul, .header-top-container-end ul{
@@ -37,23 +44,41 @@
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin: 0 15px 0 15px;
+    margin-right: 15px;
 
 }
 
 /* TOP NAV - RESPONSIVO */
 
-@media only screen and (max-width : 870px){
+@media only screen and (max-width : 1024px){
     .header-top-container{
-        justify-content: space-around;
-        font-size: .85em;
+        justify-content: space-between;
+        font-size: .90em;
+    }
+
+    .header-top-container-start{
+        margin-left: 50px;
+    }
+
+    .header-top-container-end{
+        margin-right: 50px;
     }
 }
 
-@media only screen and (max-width : 768px){
+@media only screen and (min-width: 800px) and (max-width: 877px){
     .header-top-container{
-        display: none;
+        justify-content: space-between;
+        font-size: .90em;
     }
+
+    .header-top-container-start{
+        margin-left: 30px;
+    }
+
+    .header-top-container-end{
+        margin-right: 30px;
+    }
+
 }
 
 /* MENU */
@@ -63,14 +88,19 @@
     background-color: #0077FF;
     display: flex;
     justify-content: space-between;
-
     padding: 20px 0 20px 0;
 }
 
 .navigationbar-logo{
-    display: flex;
     width: 200px;
-    padding-left: 20px;
+    margin-left: 50px;
+    
+}
+
+.navigation-container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
 }
 
 .navigation-container ul{
@@ -78,6 +108,7 @@
     padding: 10px;
     flex: 1 0 182px;
     flex-wrap: wrap;
+    align-items: center;
 
 }
 
@@ -89,22 +120,28 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* MENU MEDIA QUERY - RESPONSIVO */
+/* MENU - RESPONSIVO */
 
-@media only screen and (max-width : 1000px){
+@media only screen and (max-width : 1024px){
     .header-navigation-container{
-        justify-content: space-evenly;
+        justify-content: space-between;
+        font-size: .85em;
+    }
+    .navigationbar-logo{
+        margin-left: 50px;
+    }
+    .navigation-container{
+        margin-right: 50px;;
     }
 }
-@media only screen and (max-width : 832px){
-    .header-navigation-container{
-        justify-content: space-evenly;
-        font-size: .95em;
+
+@media only screen and (min-width: 800px) and (max-width: 877px){
+    .navigationbar-logo{
+        margin-left: 30px;
+        width: 160px;
     }
-}
-@media only screen and (max-width : 769px){
-    .header-navigation-container{
-        justify-content: space-evenly;
-        font-size: .80em;
+    .navigation-container{
+        margin-right: 30px;
+        font-size: 1em;
     }
 }
